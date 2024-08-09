@@ -1,5 +1,5 @@
 import React from "react";
-import {PaletteColor} from "../colors/PaletteColors.tsx";
+import {PaletteColor} from "../colors/PaletteColors.ts";
 
 interface Props {
   paletteColor: PaletteColor;

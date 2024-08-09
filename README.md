@@ -1,3 +1,3 @@
-## Color Pallette
+## Color Palette
 
-Used https://www.saurabhmisra.dev/setup-react-pwa-using-vite/ to set up pwa.
+Progressive web app to display a palette of colors.
