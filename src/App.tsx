@@ -1,7 +1,7 @@
 import {VerticalSnapScrollContainer} from "./components/VerticalSnapScrollContainer.tsx";
 import {ColorBlock} from "./components/ColorBlock.tsx";
 import {paletteColors} from "./colors/PaletteColors.ts";
-import {Settings} from "./components/settings/Settings.tsx";
+import {TopDrawer} from "./components/topDrawer/TopDrawer.tsx";
 import {GlobalStyles} from "tss-react";
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
         }}
       />
       <VerticalSnapScrollContainer>
-        <Settings />
+        <TopDrawer />
         {paletteColors.map((paletteColor, index) => (
           <ColorBlock key={index} paletteColor={paletteColor} />
         ))}

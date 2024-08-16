@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {tss} from "../../tss.ts";
 import {TopBarContent} from "./TopBarContent.tsx";
+import {Settings} from "./Settings.tsx";
 
-export const Settings: React.FC = () => {
+export const TopDrawer: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const {classes, cx} = useStyles({isOpen});
 
@@ -22,11 +23,11 @@ export const Settings: React.FC = () => {
       {/*  Add palette*/}
       {/*</button>*/}
 
-      <TopBarContent
-        onOpenSettings={() => {
-          setIsOpen((prev) => !prev);
-        }}
-      />
+      {isOpen ? (
+        <Settings onCloseSettings={() => setIsOpen(false)} />
+      ) : (
+        <TopBarContent onOpenSettings={() => setIsOpen(true)} />
+      )}
     </div>
   );
 };
@@ -40,7 +41,7 @@ const useStyles = tss
       left: "0",
       right: "0",
       margin: "auto",
-      backgroundColor: theme.gray,
+      backgroundColor: theme.colors.grayDark,
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-between",
